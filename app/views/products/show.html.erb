@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @product %>
+
+<div>
+  <%= link_to "Edit this product", edit_product_path(@product) %> |
+  <%= link_to "Cart", cart_path(@cart) %> |
+  <%= link_to "Back to products", products_path %>
+  <%= button_to "Add to cart", line_items_path(product_id: @product) %>
+  <%= button_to "Delete", @product, method: :delete, data: { confirm: "Are you sure?" } %>
+</div>

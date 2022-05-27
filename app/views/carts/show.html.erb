@@ -1,0 +1,17 @@
+
+<div>
+<%= link_to "back to products", products_path %>
+</div>
+
+
+<div>
+     <%= render(@cart.line_items) %>
+     <div>
+        <div>
+           <%= button_to "Clear Cart", @cart, method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
+           <div>
+                <span>  <%= number_to_currency(@cart.total_price) %></span>
+           </div>
+     </div>
+</div>

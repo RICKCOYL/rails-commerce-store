@@ -1,0 +1,15 @@
+<div class="" id="<%= dom_id product %>">
+    <div class="card" style="width: 18rem;">
+      <%= image_path product.image, size: "200x200" %>
+      <div class="card-body">
+        <h5 class="card-title"><%= product.title %></h5>
+        <p class="card-text">
+         <%= number_to_currency( product.price )%>
+        </p>
+        <p class="card-text"> <%= product.conditon %></p>
+        <p class="card-text"> <%= product.brand %></p>
+        <p class="card-text"> <%= product.model %></p>
+        <p class="card-text"><%= product.description %></p>
+      </div>
+</div>
+
