@@ -1,15 +1,16 @@
-<div class="" id="<%= dom_id product %>">
-    <div class="card" style="width: 18rem;">
-      <%= image_path product.image, size: "200x200" %>
+<div class="card " style="width: 18rem;">
+      <%= image_tag("#{product.image}") %>
       <div class="card-body">
-        <h5 class="card-title"><%= product.title %></h5>
+        <h5 class="card-title">Title: <%= product.title %></h5>
         <p class="card-text">
+        Price:
          <%= number_to_currency( product.price )%>
         </p>
-        <p class="card-text"> <%= product.conditon %></p>
-        <p class="card-text"> <%= product.brand %></p>
-        <p class="card-text"> <%= product.model %></p>
-        <p class="card-text"><%= product.description %></p>
+        <p class="card-text">Condition: <%= product.conditon %></p>
+        <p class="card-text">Brand: <%= product.brand %></p>
+        <p class="card-text">Model: <%= product.model %></p>
+        <p class="card-text">Description: <%= product.description %></p>
+        <span> Number of item left: <%= product.quantity %></span>
       </div>
 </div>
 

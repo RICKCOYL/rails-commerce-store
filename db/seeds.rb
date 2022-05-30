@@ -8,8 +8,8 @@
 
 
 user = User.new(
-    id: 6,
-    email: "grayish@gmail.com",
+    id: 2,
+    email: "read@gmail.com",
     password: "123456",
     password_confirmation: "123456",
 )
@@ -24,8 +24,9 @@ Product.create!([{
     brand: "Apple",
     model: "iPhone X",
     conditon: "New",
-    image: Rails.root.join("app/assets/images/product1.jpg").open,
-    user_id: user.id
+    image:  ActionController::Base.helpers.image_path("product1.jpg"),
+    user_id: user.id,
+    quantity: 10,
 }, {
     id: 2,
     title: "Product 2",
@@ -34,8 +35,9 @@ Product.create!([{
     brand: "Samsung",
     model: "Galaxy S10",
     conditon: "New",
-    image: Rails.root.join("app/assets/images/product2.jpg").open,
-    user_id: user.id
+    image: ActionController::Base.helpers.image_path("product2.jpg"),
+    user_id: user.id,
+    quantity: 10
 }, {
     id: 3,
     title: "Product 3",
@@ -44,7 +46,8 @@ Product.create!([{
     brand: "LG",
     model: "G7",
     conditon: "New",
-    image: Rails.root.join("app/assets/images/product3.jpg").open,
-    user_id: user.id
+    image: ActionController::Base.helpers.image_path("product3.jpg"),
+    user_id: user.id,
+    quantity: 5
 }
 ])

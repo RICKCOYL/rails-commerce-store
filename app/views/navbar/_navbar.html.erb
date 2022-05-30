@@ -2,10 +2,10 @@
   <%= link_to "Cbay", root_path%>
   <div class="form-inline">
     <%= link_to "Home", root_path, class: "btn btn-success" %>
-
+    
     <% if user_signed_in? %>
         <span> 
-        <%= link_to "Cart" , cart_path(@cart), class: "btn btn-success" %>
+        <%= link_to "Cart" , cart_path(@cart), class: "btn btn-success " %>
             <% if cart_has_items? %>
             <span class="badge badge-light"><%= @cart.line_items.count %></span>
           <% end %>
@@ -13,7 +13,7 @@
         </span>
           <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-danger" %>
     <% else %>
-        <%= link_to "Login", new_user_session_path, class: "btn btn-outline-success" %>
+        <%= link_to "Login", new_user_session_path, class: "btn btn-outline-success " %>
         <%= link_to "Signup", new_user_registration_path, class: "btn btn-outline-success" %>
     <% end %>
   </div>

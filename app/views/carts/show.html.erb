@@ -5,7 +5,9 @@
 
 
 <div>
-     <%= render(@cart.line_items) %>
+     <div class="row">
+         <%= render(@cart.line_items) %>
+     </div>
      <div>
         <div>
            <%= button_to "Clear Cart", @cart, method: :delete, data: { confirm: "Are you sure?" } %>

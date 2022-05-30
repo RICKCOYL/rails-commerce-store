@@ -14,6 +14,14 @@ class Product < ApplicationRecord
     BRANDS = %w{ Apple Samsung LG Sony }
     CONDITION = %w{ New Used }
 
+
+   puts "####################"
+
+   puts  @line_items = LineItem.all.where(product_id: @product_id)
+
+    puts "####################"
+
+
     private
     def ensure_not_referenced_by_any_line_item
        unless line_items.empty?

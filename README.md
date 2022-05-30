@@ -1,25 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### To start app run the following 
 
-Things you may want to cover:
+`bundle install`
 
-* Ruby version
+`rails db:migrate`
 
-* System dependencies
+`rails db:seed`
 
-* Configuration
+`rails s`
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-"# rails-commerce-store" 
+[live demo]()
