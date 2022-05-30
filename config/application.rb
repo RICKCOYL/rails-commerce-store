@@ -9,10 +9,10 @@ Bundler.require(*Rails.groups)
 module Cbay
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.assets.initialize_on_precompile = false
     config.load_defaults 7.0
     config.serve_static_assets = true
     # config.active_storage.replace_on_assign_to_many = false
-    config.assets.initialize_on_precompile = false
 
     # Configuration for the application, engines, and railties goes here.
     #
