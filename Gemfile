@@ -19,10 +19,9 @@ gem 'gravatar_image_tag', '~> 1.2'
 gem 'mini_magick'
 gem 'hirb', '~> 0.7.3'
 
-
 group :development, :test do
+  gem "sqlite3", "~> 1.4"
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem "sqlite3"
   
 end
 
@@ -31,7 +30,7 @@ group :development do
 end
 
 group :production do
-     gem "pg"
+  gem "pg"
 end
 
 group :test do
