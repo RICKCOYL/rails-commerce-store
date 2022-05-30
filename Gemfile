@@ -18,12 +18,11 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'mini_magick'
 gem 'hirb', '~> 0.7.3'
-  gem "pg"
 
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  # gem "sqlite3"
+  gem "sqlite3"
   
 end
 
@@ -32,6 +31,7 @@ group :development do
 end
 
 group :production do
+     gem "pg"
 end
 
 group :test do
